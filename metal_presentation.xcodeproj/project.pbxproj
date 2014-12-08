@@ -14,6 +14,7 @@
 		43816E3C1A357CEC005BD026 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43816E3B1A357CEC005BD026 /* Images.xcassets */; };
 		43816E3F1A357CEC005BD026 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43816E3D1A357CEC005BD026 /* LaunchScreen.xib */; };
 		43816E4B1A357CEC005BD026 /* metal_presentationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43816E4A1A357CEC005BD026 /* metal_presentationTests.m */; };
+		43816E561A357DC7005BD026 /* NTMetalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43816E551A357DC7005BD026 /* NTMetalView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		43816E441A357CEC005BD026 /* metal_presentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = metal_presentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43816E491A357CEC005BD026 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43816E4A1A357CEC005BD026 /* metal_presentationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = metal_presentationTests.m; sourceTree = "<group>"; };
+		43816E541A357DC7005BD026 /* NTMetalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTMetalView.h; sourceTree = "<group>"; };
+		43816E551A357DC7005BD026 /* NTMetalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTMetalView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				43816E3B1A357CEC005BD026 /* Images.xcassets */,
 				43816E3D1A357CEC005BD026 /* LaunchScreen.xib */,
 				43816E2E1A357CEC005BD026 /* Supporting Files */,
+				43816E541A357DC7005BD026 /* NTMetalView.h */,
+				43816E551A357DC7005BD026 /* NTMetalView.m */,
 			);
 			path = metal_presentation;
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43816E561A357DC7005BD026 /* NTMetalView.m in Sources */,
 				43816E371A357CEC005BD026 /* ViewController.m in Sources */,
 				43816E341A357CEC005BD026 /* AppDelegate.m in Sources */,
 				43816E311A357CEC005BD026 /* main.m in Sources */,
@@ -344,6 +350,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = metal_presentation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,6 +361,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = metal_presentation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

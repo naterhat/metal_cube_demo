@@ -8,8 +8,10 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@import QuartzCore.CADisplayLink;
 
+@interface ViewController ()
+@property (nonatomic) CADisplayLink *ticker;
 @end
 
 @implementation ViewController
@@ -17,11 +19,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    _ticker = [CADisplayLink displayLinkWithTarget:self selector:@selector(update)];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)update
+{
+    
 }
 
 @end
