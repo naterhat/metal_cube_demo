@@ -20,6 +20,12 @@ NTCameraT NTCameraTDefault()
 @implementation NTCameraComponent
 @synthesize view = _view;
 
++ (instancetype)cameraWithSize:(CGSize)size
+{
+    NTCameraComponent *camera = [[NTCameraComponent alloc] initWithSize:size];
+    return camera;
+}
+
 + (NSMutableArray *)cameras
 {
     static NSMutableArray *cameras = nil;
@@ -40,7 +46,8 @@ NTCameraT NTCameraTDefault()
 {
     if(self = [super init]) {
         // get mvp
-        [self setSize:size];
+        [self setSize:size]; // this will also set projection
+        _view = matrix_identity_float4x4;
         _camera = NTCameraTDefault();
         [[[self class] cameras] addObject:self];
     } return self;

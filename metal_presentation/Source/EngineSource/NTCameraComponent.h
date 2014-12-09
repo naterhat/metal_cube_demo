@@ -7,7 +7,7 @@
 //
 
 #import "NTComponent.h"
-#import <CoreGraphics/CoreGraphics.h>
+#import <CoreGraphics/CGGeometry.h>
 #import <simd/simd.h>
 
 typedef struct{
@@ -23,6 +23,7 @@ NTCameraT NTCameraTDefault();
 @property (nonatomic, readonly) matrix_float4x4 view;
 + (NTCameraComponent *)mainCamera;
 - (instancetype)initWithSize:(CGSize)size;
++ (instancetype)cameraWithSize:(CGSize)size;
 //- (NTCameraT *)cameraPointer;
 
 //- (vector_float3)positionFromScreenSpaceToWorldSpaceWithPoint:(vector_float2)touchPoint distance:(float)distance;
