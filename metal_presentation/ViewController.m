@@ -29,7 +29,7 @@
     
     // per frame
     id<MTLCommandBuffer> _commandBuffer;
-    id<MTLCommandEncoder> _commandEncoder;
+    id<MTLRenderCommandEncoder> _commandEncoder;
     id<CAMetalDrawable> _drawable;
     id<MTLTexture> _depthTexture; // will be initialize in render pass setup
     MTLRenderPassDescriptor *_renderPassDescriptor;
@@ -124,10 +124,14 @@
 - (void)setupRenderPipeline
 {
     // set render pipeline
+    [_commandEncoder setRenderPipelineState:_renderPipeline];
     
     // set depth
+    [_commandEncoder setDepthStencilState:_depthState];
     
     // set buffers
+    [_commandEncoder setVertexBuffer:_vertexBuffer offset:0 atIndex:0];
+    [_commandEncoder setVertexBuffer:_uniformBuffer offset:0 atIndex:1];
     
     // set textures
     // . . . there are none at this moment
