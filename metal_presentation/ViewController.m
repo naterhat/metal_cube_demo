@@ -34,6 +34,7 @@
     NTCameraComponent *_cameraComponent;
     Uniform _uniform;
     
+    
     // per frame
     id<MTLCommandBuffer> _commandBuffer;
     id<MTLRenderCommandEncoder> _commandEncoder;
@@ -53,20 +54,9 @@
     
     
     _ticker = [CADisplayLink displayLinkWithTarget:self selector:@selector(perFrame)];
+    [_ticker addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
     
     [self setup];
-}
-
-- (void)updatePhysics
-{
-    matrix_float4x4 modelView = matrix_multiply(_transformComponent.transform, _cameraComponent.view);
-    matrix_float4x4 modelViewProjection = matrix_multiply(modelView, _cameraComponent.projection);
-    
-    _uniform.modelViewProjectionMatrix = modelViewProjection;
-    
-    _uniform.normalMatrix = matrix_transpose( matrix_invert(modelView) );
-    
-    memcpy([_uniformBuffer contents], &_uniform, sizeof(Uniform));
 }
 
 - (void)setup
@@ -87,7 +77,7 @@
     // set render pipeline
     MTLRenderPipelineDescriptor *renderPipelineDescriptor = [MTLRenderPipelineDescriptor new];
     renderPipelineDescriptor.depthAttachmentPixelFormat = MTLPixelFormatDepth32Float;
-    renderPipelineDescriptor.colorAttachments[0].pixelFormat = MTLPixelFormatRGBA8Unorm;
+    renderPipelineDescriptor.colorAttachments[0].pixelFormat = MTLPixelFormatBGRA8Unorm;
     [renderPipelineDescriptor setVertexFunction:vertexFunction];
     [renderPipelineDescriptor setFragmentFunction:fragmentFunction];
     
@@ -104,13 +94,31 @@
     
     _depthState = [_device newDepthStencilStateWithDescriptor:depthDescriptor];
     
-    // set buffers
+    // initialize components
     _mesh = [NTCubeMeshComponent component];
+    _transformComponent = [NTTransformComponent component];
+    [_transformComponent setPositionWithX:0 Y:0 Z:10];
+    _cameraComponent = [NTCameraComponent cameraWithSize:self.view.frame.size];
+    
+    // set buffers
     _vertexBuffer = [_device newBufferWithBytes:[_mesh vertexData] length:[_mesh vertexTotalSize] options:MTLResourceOptionCPUCacheModeDefault];
     _uniformBuffer = [_device newBufferWithLength:sizeof(Uniform) options:MTLResourceOptionCPUCacheModeDefault];
     
-    _transformComponent = [NTTransformComponent component];
-    _cameraComponent = [NTCameraComponent component];
+    
+}
+
+#pragma mark - Per Frame
+
+- (void)updatePhysics
+{
+    matrix_float4x4 modelView = matrix_multiply(_cameraComponent.view, _transformComponent.transform);
+    matrix_float4x4 modelViewProjection = matrix_multiply(_cameraComponent.projection, modelView);
+    
+    _uniform.modelViewProjectionMatrix = modelViewProjection;
+    
+    _uniform.normalMatrix = matrix_invert( matrix_transpose(modelView) );
+    
+    memcpy([_uniformBuffer contents], &_uniform, sizeof(Uniform));
 }
 
 - (void)beginRenderPass
@@ -127,12 +135,15 @@
     if (!_renderPassDescriptor) {
         _renderPassDescriptor = [MTLRenderPassDescriptor new];
         [_renderPassDescriptor.colorAttachments[0] setLoadAction:MTLLoadActionClear];
-        [_renderPassDescriptor.colorAttachments[0] setStoreAction:MTLStoreActionStore];
         [_renderPassDescriptor.colorAttachments[0] setClearColor:MTLClearColorMake(0, 1, 0, 1)];
+        [_renderPassDescriptor.colorAttachments[0] setStoreAction:MTLStoreActionStore];
     }
     
     // set colors attachments
     [_renderPassDescriptor.colorAttachments[0] setTexture:drawableTexture];
+    [_renderPassDescriptor.colorAttachments[0] setLoadAction:MTLLoadActionClear];
+    [_renderPassDescriptor.colorAttachments[0] setClearColor:MTLClearColorMake(0, 1, 0, 1)];
+    [_renderPassDescriptor.colorAttachments[0] setStoreAction:MTLStoreActionStore];
     
     // set depth attachment
     if( !_depthTexture ) {
@@ -142,7 +153,9 @@
     }
     [_renderPassDescriptor.depthAttachment setTexture:_depthTexture];
     [_renderPassDescriptor.depthAttachment setLoadAction:MTLLoadActionClear];
+    _renderPassDescriptor.depthAttachment.clearDepth = 1.0f;
     [_renderPassDescriptor.depthAttachment setStoreAction:MTLStoreActionDontCare];
+    
     
     // create command encoder
     _commandEncoder = [_commandBuffer renderCommandEncoderWithDescriptor:_renderPassDescriptor];
@@ -179,6 +192,7 @@
 - (void)commit
 {
     // commit buffer
+    [_commandBuffer presentDrawable:_drawable];
     [_commandBuffer commit];
     
     _commandBuffer = nil;
