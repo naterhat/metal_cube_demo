@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
-#import "NTShared.h"
+#import "NTSharedDataTypes.h"
 #import "NTCubeMeshComponent.h"
+#import "NTTransformComponent.h"
+#import "NTCameraComponent.h"
 
 @import Metal;
 @import QuartzCore.CADisplayLink;
@@ -27,6 +29,10 @@
     id<MTLBuffer> _vertexBuffer;
     id<MTLBuffer> _indexBuffer;
     id<MTLBuffer> _uniformBuffer;
+    
+    NTTransformComponent *transformComponent;
+    NTCameraComponent *cameraComponent;
+    
     
     // per frame
     id<MTLCommandBuffer> _commandBuffer;
@@ -87,7 +93,7 @@
     _depthState = [_device newDepthStencilStateWithDescriptor:depthDescriptor];
     
     // set buffers
-    _mesh = [NTCubeMeshComponent component];
+    
 }
 
 - (void)beginRenderPass
