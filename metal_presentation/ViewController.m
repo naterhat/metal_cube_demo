@@ -30,9 +30,9 @@
     id<MTLBuffer> _indexBuffer;
     id<MTLBuffer> _uniformBuffer;
     
-    NTTransformComponent *transformComponent;
-    NTCameraComponent *cameraComponent;
-    
+    NTTransformComponent *_transformComponent;
+    NTCameraComponent *_cameraComponent;
+    Uniform *_uniform;
     
     // per frame
     id<MTLCommandBuffer> _commandBuffer;
@@ -55,6 +55,11 @@
     _ticker = [CADisplayLink displayLinkWithTarget:self selector:@selector(perFrame)];
     
     [self setup];
+}
+
+- (void)updatePhysics
+{
+    
 }
 
 - (void)setup
@@ -93,7 +98,12 @@
     _depthState = [_device newDepthStencilStateWithDescriptor:depthDescriptor];
     
     // set buffers
+    _mesh = [NTCubeMeshComponent component];
+    _vertexBuffer = [_device newBufferWithBytes:[_mesh vertexData] length:[_mesh vertexTotalSize] options:MTLResourceOptionCPUCacheModeDefault];
+    _uniformBuffer = [_device newBufferWithLength:sizeof(Uniform) options:MTLResourceOptionCPUCacheModeDefault];
     
+    _transformComponent = [NTTransformComponent component];
+    _cameraComponent = [NTCameraComponent component];
 }
 
 - (void)beginRenderPass
@@ -170,6 +180,7 @@
 
 - (void)perFrame
 {
+    [self updatePhysics];
     [self beginRenderPass];
     [self setupRenderPipeline];
     [self draw];
