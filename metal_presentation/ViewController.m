@@ -22,7 +22,7 @@
     id<MTLCommandQueue> _commandQueue;
     id<MTLRenderPipelineState> _renderPipeline;
     id<MTLDepthStencilState> _depthState;
-    id<MTLTexture> _depthTexture; // will be initialize in render pass setup
+    
     id<MTLBuffer> _vertexBuffer;
     id<MTLBuffer> _indexBuffer;
     id<MTLBuffer> _uniformBuffer;
@@ -31,6 +31,8 @@
     id<MTLCommandBuffer> _commandBuffer;
     id<MTLCommandEncoder> _commandEncoder;
     id<CAMetalDrawable> _drawable;
+    id<MTLTexture> _depthTexture; // will be initialize in render pass setup
+    MTLRenderPassDescriptor *_renderPassDescriptor;
 }
 @property (nonatomic) CADisplayLink *ticker;
 @end
@@ -87,11 +89,36 @@
 - (void)beginRenderPass
 {
     // create command buffer
+    _commandBuffer = [_commandQueue commandBuffer];
     
     // get drawable texture
+    _drawable = [_metalLayer nextDrawable];
+    NSAssert(_drawable != nil, @"Error retrieving drawable");
+    id<MTLTexture>drawableTexture = [_drawable texture];
+    
+    // create render pass descriptor
+    if (!_renderPassDescriptor) {
+        _renderPassDescriptor = [MTLRenderPassDescriptor new];
+        [_renderPassDescriptor.colorAttachments[0] setLoadAction:MTLLoadActionClear];
+        [_renderPassDescriptor.colorAttachments[0] setStoreAction:MTLStoreActionStore];
+        [_renderPassDescriptor.colorAttachments[0] setClearColor:MTLClearColorMake(0, 1, 0, 1)];
+    }
+    
+    // set colors attachments
+    [_renderPassDescriptor.colorAttachments[0] setTexture:drawableTexture];
+    
+    // set depth attachment
+    if( !_depthTexture ) {
+        MTLTextureDescriptor *depthTextureDescriptor = [MTLTextureDescriptor texture2DDescriptorWithPixelFormat:MTLPixelFormatDepth32Float width:[drawableTexture width] height:[drawableTexture height] mipmapped:NO];
+        
+        _depthTexture = [_device newTextureWithDescriptor:depthTextureDescriptor];
+    }
+    [_renderPassDescriptor.depthAttachment setTexture:_depthTexture];
+    [_renderPassDescriptor.depthAttachment setLoadAction:MTLLoadActionClear];
+    [_renderPassDescriptor.depthAttachment setStoreAction:MTLStoreActionDontCare];
     
     // create command encoder
-    
+    _commandEncoder = [_commandBuffer renderCommandEncoderWithDescriptor:_renderPassDescriptor];
 }
 
 - (void)setupRenderPipeline
@@ -104,7 +131,6 @@
     
     // set textures
     // . . . there are none at this moment
-    
 }
 
 - (void)draw
