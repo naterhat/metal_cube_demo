@@ -7,8 +7,7 @@
 //
 
 #import "NTLineMeshComponent.h"
-#import <CoreGraphics/CoreGraphics.h>
-#import "NTShared.h"
+#import "NTSharedDataTypes.h"
 #import <vector>
 
 using namespace std;

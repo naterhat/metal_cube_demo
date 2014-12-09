@@ -8,6 +8,7 @@
 
 #import "NTSpherePlaneMeshComponent.h"
 #import "NTConversion.h"
+#import "NTSharedDataTypes.h"
 
 #define kFullCircleRadian M_PI * 2
 

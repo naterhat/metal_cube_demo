@@ -8,6 +8,7 @@
 
 #import "NTRayMeshComponent.h"
 #import "NTConversion.h"
+#import "NTSharedDataTypes.h"
 
 @interface NTRayMeshComponent ()
 {

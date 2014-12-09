@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 ifcantel. All rights reserved.
 //
 
-#import "NTComponent.h"
 #import "NTMeshComponent.h"
 
 @interface NTSpherePlaneMeshComponent : NTComponent <NTMeshProtocol>
