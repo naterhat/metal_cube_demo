@@ -15,6 +15,18 @@
 		43816E3F1A357CEC005BD026 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43816E3D1A357CEC005BD026 /* LaunchScreen.xib */; };
 		43816E4B1A357CEC005BD026 /* metal_presentationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43816E4A1A357CEC005BD026 /* metal_presentationTests.m */; };
 		43816E561A357DC7005BD026 /* NTMetalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43816E551A357DC7005BD026 /* NTMetalView.m */; };
+		43816E701A368D0A005BD026 /* NTCubeMeshComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 43816E5B1A368D0A005BD026 /* NTCubeMeshComponent.mm */; };
+		43816E711A368D0A005BD026 /* NTMeshComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 43816E5D1A368D0A005BD026 /* NTMeshComponent.mm */; };
+		43816E721A368D0A005BD026 /* NTQuadMeshComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 43816E601A368D0A005BD026 /* NTQuadMeshComponent.mm */; };
+		43816E741A368D0A005BD026 /* NTTextureQuadMeshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 43816E651A368D0A005BD026 /* NTTextureQuadMeshComponent.m */; };
+		43816E751A368D0A005BD026 /* NTLineMeshComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 43816E671A368D0A005BD026 /* NTLineMeshComponent.mm */; };
+		43816E761A368D0A005BD026 /* NTSpherePlaneMeshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 43816E691A368D0A005BD026 /* NTSpherePlaneMeshComponent.m */; };
+		43816E771A368D0A005BD026 /* NTRayMeshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 43816E6B1A368D0A005BD026 /* NTRayMeshComponent.m */; };
+		43816E781A368D0A005BD026 /* NTUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 43816E6D1A368D0A005BD026 /* NTUtilities.m */; };
+		43816E791A368D0A005BD026 /* NTObjectGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 43816E6F1A368D0A005BD026 /* NTObjectGroup.m */; };
+		43816E7C1A368D3C005BD026 /* NTComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 43816E7B1A368D3C005BD026 /* NTComponent.mm */; };
+		43816E7F1A368D82005BD026 /* NTConversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 43816E7E1A368D82005BD026 /* NTConversion.m */; };
+		43816E821A368D9E005BD026 /* OBJModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 43816E811A368D9E005BD026 /* OBJModel.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +55,31 @@
 		43816E4A1A357CEC005BD026 /* metal_presentationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = metal_presentationTests.m; sourceTree = "<group>"; };
 		43816E541A357DC7005BD026 /* NTMetalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTMetalView.h; sourceTree = "<group>"; };
 		43816E551A357DC7005BD026 /* NTMetalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTMetalView.m; sourceTree = "<group>"; };
+		43816E5A1A368D0A005BD026 /* NTCubeMeshComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTCubeMeshComponent.h; sourceTree = "<group>"; };
+		43816E5B1A368D0A005BD026 /* NTCubeMeshComponent.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NTCubeMeshComponent.mm; sourceTree = "<group>"; };
+		43816E5C1A368D0A005BD026 /* NTMeshComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTMeshComponent.h; sourceTree = "<group>"; };
+		43816E5D1A368D0A005BD026 /* NTMeshComponent.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NTMeshComponent.mm; sourceTree = "<group>"; };
+		43816E5F1A368D0A005BD026 /* NTQuadMeshComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTQuadMeshComponent.h; sourceTree = "<group>"; };
+		43816E601A368D0A005BD026 /* NTQuadMeshComponent.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NTQuadMeshComponent.mm; sourceTree = "<group>"; };
+		43816E631A368D0A005BD026 /* NTShared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTShared.h; sourceTree = "<group>"; };
+		43816E641A368D0A005BD026 /* NTTextureQuadMeshComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTTextureQuadMeshComponent.h; sourceTree = "<group>"; };
+		43816E651A368D0A005BD026 /* NTTextureQuadMeshComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTTextureQuadMeshComponent.m; sourceTree = "<group>"; };
+		43816E661A368D0A005BD026 /* NTLineMeshComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTLineMeshComponent.h; sourceTree = "<group>"; };
+		43816E671A368D0A005BD026 /* NTLineMeshComponent.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NTLineMeshComponent.mm; sourceTree = "<group>"; };
+		43816E681A368D0A005BD026 /* NTSpherePlaneMeshComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSpherePlaneMeshComponent.h; sourceTree = "<group>"; };
+		43816E691A368D0A005BD026 /* NTSpherePlaneMeshComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSpherePlaneMeshComponent.m; sourceTree = "<group>"; };
+		43816E6A1A368D0A005BD026 /* NTRayMeshComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTRayMeshComponent.h; sourceTree = "<group>"; };
+		43816E6B1A368D0A005BD026 /* NTRayMeshComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTRayMeshComponent.m; sourceTree = "<group>"; };
+		43816E6C1A368D0A005BD026 /* NTUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTUtilities.h; sourceTree = "<group>"; };
+		43816E6D1A368D0A005BD026 /* NTUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTUtilities.m; sourceTree = "<group>"; };
+		43816E6E1A368D0A005BD026 /* NTObjectGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTObjectGroup.h; sourceTree = "<group>"; };
+		43816E6F1A368D0A005BD026 /* NTObjectGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTObjectGroup.m; sourceTree = "<group>"; };
+		43816E7A1A368D3C005BD026 /* NTComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTComponent.h; sourceTree = "<group>"; };
+		43816E7B1A368D3C005BD026 /* NTComponent.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NTComponent.mm; sourceTree = "<group>"; };
+		43816E7D1A368D82005BD026 /* NTConversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTConversion.h; sourceTree = "<group>"; };
+		43816E7E1A368D82005BD026 /* NTConversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTConversion.m; sourceTree = "<group>"; };
+		43816E801A368D9E005BD026 /* OBJModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBJModel.h; sourceTree = "<group>"; };
+		43816E811A368D9E005BD026 /* OBJModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OBJModel.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +121,7 @@
 		43816E2D1A357CEC005BD026 /* metal_presentation */ = {
 			isa = PBXGroup;
 			children = (
+				43816E591A368CE4005BD026 /* MeshComponents */,
 				43816E321A357CEC005BD026 /* AppDelegate.h */,
 				43816E331A357CEC005BD026 /* AppDelegate.m */,
 				43816E351A357CEC005BD026 /* ViewController.h */,
@@ -122,6 +160,38 @@
 				43816E491A357CEC005BD026 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		43816E591A368CE4005BD026 /* MeshComponents */ = {
+			isa = PBXGroup;
+			children = (
+				43816E801A368D9E005BD026 /* OBJModel.h */,
+				43816E811A368D9E005BD026 /* OBJModel.mm */,
+				43816E7D1A368D82005BD026 /* NTConversion.h */,
+				43816E7E1A368D82005BD026 /* NTConversion.m */,
+				43816E7A1A368D3C005BD026 /* NTComponent.h */,
+				43816E7B1A368D3C005BD026 /* NTComponent.mm */,
+				43816E5A1A368D0A005BD026 /* NTCubeMeshComponent.h */,
+				43816E5B1A368D0A005BD026 /* NTCubeMeshComponent.mm */,
+				43816E5C1A368D0A005BD026 /* NTMeshComponent.h */,
+				43816E5D1A368D0A005BD026 /* NTMeshComponent.mm */,
+				43816E5F1A368D0A005BD026 /* NTQuadMeshComponent.h */,
+				43816E601A368D0A005BD026 /* NTQuadMeshComponent.mm */,
+				43816E631A368D0A005BD026 /* NTShared.h */,
+				43816E641A368D0A005BD026 /* NTTextureQuadMeshComponent.h */,
+				43816E651A368D0A005BD026 /* NTTextureQuadMeshComponent.m */,
+				43816E661A368D0A005BD026 /* NTLineMeshComponent.h */,
+				43816E671A368D0A005BD026 /* NTLineMeshComponent.mm */,
+				43816E681A368D0A005BD026 /* NTSpherePlaneMeshComponent.h */,
+				43816E691A368D0A005BD026 /* NTSpherePlaneMeshComponent.m */,
+				43816E6A1A368D0A005BD026 /* NTRayMeshComponent.h */,
+				43816E6B1A368D0A005BD026 /* NTRayMeshComponent.m */,
+				43816E6C1A368D0A005BD026 /* NTUtilities.h */,
+				43816E6D1A368D0A005BD026 /* NTUtilities.m */,
+				43816E6E1A368D0A005BD026 /* NTObjectGroup.h */,
+				43816E6F1A368D0A005BD026 /* NTObjectGroup.m */,
+			);
+			name = MeshComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,10 +294,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43816E7C1A368D3C005BD026 /* NTComponent.mm in Sources */,
 				43816E561A357DC7005BD026 /* NTMetalView.m in Sources */,
 				43816E371A357CEC005BD026 /* ViewController.m in Sources */,
+				43816E7F1A368D82005BD026 /* NTConversion.m in Sources */,
+				43816E721A368D0A005BD026 /* NTQuadMeshComponent.mm in Sources */,
+				43816E781A368D0A005BD026 /* NTUtilities.m in Sources */,
 				43816E341A357CEC005BD026 /* AppDelegate.m in Sources */,
+				43816E771A368D0A005BD026 /* NTRayMeshComponent.m in Sources */,
+				43816E741A368D0A005BD026 /* NTTextureQuadMeshComponent.m in Sources */,
+				43816E701A368D0A005BD026 /* NTCubeMeshComponent.mm in Sources */,
+				43816E711A368D0A005BD026 /* NTMeshComponent.mm in Sources */,
+				43816E791A368D0A005BD026 /* NTObjectGroup.m in Sources */,
+				43816E751A368D0A005BD026 /* NTLineMeshComponent.mm in Sources */,
+				43816E761A368D0A005BD026 /* NTSpherePlaneMeshComponent.m in Sources */,
 				43816E311A357CEC005BD026 /* main.m in Sources */,
+				43816E821A368D9E005BD026 /* OBJModel.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
