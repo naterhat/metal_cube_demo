@@ -156,6 +156,10 @@
 - (void)commit
 {
     // commit buffer
+    [_commandBuffer commit];
+    
+    _commandBuffer = nil;
+    _drawable = nil;
 }
 
 - (void)perFrame
