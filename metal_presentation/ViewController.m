@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "NTShared.h"
+#import "NTCubeMeshComponent.h"
 
 @import Metal;
 @import QuartzCore.CADisplayLink;
@@ -33,6 +34,8 @@
     id<CAMetalDrawable> _drawable;
     id<MTLTexture> _depthTexture; // will be initialize in render pass setup
     MTLRenderPassDescriptor *_renderPassDescriptor;
+    
+    NTComponent<NTMeshProtocol> *_mesh;
 }
 @property (nonatomic) CADisplayLink *ticker;
 @end
@@ -84,6 +87,7 @@
     _depthState = [_device newDepthStencilStateWithDescriptor:depthDescriptor];
     
     // set buffers
+    _mesh = [NTCubeMeshComponent component];
 }
 
 - (void)beginRenderPass
@@ -140,6 +144,7 @@
 - (void)draw
 {
     // draw
+    [_commandEncoder drawPrimitives:MTLPrimitiveTypeTriangle vertexStart:0 vertexCount:[_mesh vertexCount]];
 }
 
 - (void)endRenderPass
