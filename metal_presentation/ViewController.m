@@ -23,7 +23,7 @@
     id<MTLDepthStencilState> _depthState;
     id<MTLTexture> _depthTexture;
     id<MTLBuffer> _vertexBuffer;
-    id<MTLBuffer> _indexBuffer;    
+    id<MTLBuffer> _indexBuffer;
     
     // per frame
     id<MTLCommandBuffer> _commandBuffer;
@@ -40,6 +40,8 @@
     
     
     _ticker = [CADisplayLink displayLinkWithTarget:self selector:@selector(perFrame)];
+    
+    [self setup];
 }
 
 - (void)setup
@@ -74,7 +76,11 @@
 
 - (void)perFrame
 {
-    
+    [self beginRenderPass];
+    [self setupRenderPipeline];
+    [self draw];
+    [self endRenderPass];
+    [self commit];
 }
 
 @end
