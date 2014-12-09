@@ -32,7 +32,7 @@
     
     NTTransformComponent *_transformComponent;
     NTCameraComponent *_cameraComponent;
-    Uniform *_uniform;
+    Uniform _uniform;
     
     // per frame
     id<MTLCommandBuffer> _commandBuffer;
@@ -59,7 +59,14 @@
 
 - (void)updatePhysics
 {
+    matrix_float4x4 modelView = matrix_multiply(_transformComponent.transform, _cameraComponent.view);
+    matrix_float4x4 modelViewProjection = matrix_multiply(modelView, _cameraComponent.projection);
     
+    _uniform.modelViewProjectionMatrix = modelViewProjection;
+    
+    _uniform.normalMatrix = matrix_transpose( matrix_invert(modelView) );
+    
+    memcpy([_uniformBuffer contents], &_uniform, sizeof(Uniform));
 }
 
 - (void)setup
