@@ -150,6 +150,7 @@
 - (void)endRenderPass
 {
     // end encoder
+    [_commandEncoder endEncoding];
 }
 
 - (void)commit
