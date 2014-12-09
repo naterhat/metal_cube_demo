@@ -31,6 +31,7 @@
 		43816ED81A36D6C8005BD026 /* NTMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 43816EC21A36D6C8005BD026 /* NTMath.m */; };
 		43816ED91A36D6C8005BD026 /* NTCollisionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 43816EC41A36D6C8005BD026 /* NTCollisionTest.m */; };
 		438B6F881A376FC1006D0CC1 /* NTTransformComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 438B6F871A376FC1006D0CC1 /* NTTransformComponent.m */; };
+		438B6F8A1A378EC3006D0CC1 /* Color.metal in Sources */ = {isa = PBXBuildFile; fileRef = 438B6F891A378EC3006D0CC1 /* Color.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +71,6 @@
 		43816EAB1A36D6C8005BD026 /* NTQuadMeshComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTQuadMeshComponent.m; sourceTree = "<group>"; };
 		43816EAC1A36D6C8005BD026 /* NTSphereMeshComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSphereMeshComponent.h; sourceTree = "<group>"; };
 		43816EAD1A36D6C8005BD026 /* NTSphereMeshComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSphereMeshComponent.m; sourceTree = "<group>"; };
-		43816EAE1A36D6C8005BD026 /* NTSharedDataTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSharedDataTypes.h; sourceTree = "<group>"; };
 		43816EAF1A36D6C8005BD026 /* NTTextureQuadMeshComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTTextureQuadMeshComponent.h; sourceTree = "<group>"; };
 		43816EB01A36D6C8005BD026 /* NTTextureQuadMeshComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTTextureQuadMeshComponent.m; sourceTree = "<group>"; };
 		43816EB11A36D6C8005BD026 /* NTLineMeshComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTLineMeshComponent.h; sourceTree = "<group>"; };
@@ -96,6 +96,8 @@
 		43816EC51A36D6C8005BD026 /* NTHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTHelpers.h; sourceTree = "<group>"; };
 		438B6F861A376FC1006D0CC1 /* NTTransformComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTTransformComponent.h; sourceTree = "<group>"; };
 		438B6F871A376FC1006D0CC1 /* NTTransformComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTTransformComponent.m; sourceTree = "<group>"; };
+		438B6F891A378EC3006D0CC1 /* Color.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = Color.metal; path = metal_presentation/Color.metal; sourceTree = SOURCE_ROOT; };
+		438B6F8B1A37913F006D0CC1 /* NTSharedDataTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTSharedDataTypes.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,8 @@
 			children = (
 				43816E971A36D69F005BD026 /* Source */,
 				43816E321A357CEC005BD026 /* AppDelegate.h */,
+				438B6F8B1A37913F006D0CC1 /* NTSharedDataTypes.h */,
+				438B6F891A378EC3006D0CC1 /* Color.metal */,
 				43816E331A357CEC005BD026 /* AppDelegate.m */,
 				43816E351A357CEC005BD026 /* ViewController.h */,
 				43816E361A357CEC005BD026 /* ViewController.m */,
@@ -202,7 +206,6 @@
 				43816EAB1A36D6C8005BD026 /* NTQuadMeshComponent.m */,
 				43816EAC1A36D6C8005BD026 /* NTSphereMeshComponent.h */,
 				43816EAD1A36D6C8005BD026 /* NTSphereMeshComponent.m */,
-				43816EAE1A36D6C8005BD026 /* NTSharedDataTypes.h */,
 				43816EAF1A36D6C8005BD026 /* NTTextureQuadMeshComponent.h */,
 				43816EB01A36D6C8005BD026 /* NTTextureQuadMeshComponent.m */,
 				43816EB11A36D6C8005BD026 /* NTLineMeshComponent.h */,
@@ -347,6 +350,7 @@
 				43816ECC1A36D6C8005BD026 /* NTCubeMeshComponent.m in Sources */,
 				43816ED81A36D6C8005BD026 /* NTMath.m in Sources */,
 				43816ED71A36D6C8005BD026 /* NTUtilities.m in Sources */,
+				438B6F8A1A378EC3006D0CC1 /* Color.metal in Sources */,
 				43816ED61A36D6C8005BD026 /* NTConversion.m in Sources */,
 				43816ED41A36D6C8005BD026 /* NTObjectGroup.m in Sources */,
 				43816ED31A36D6C8005BD026 /* NTRayMeshComponent.m in Sources */,

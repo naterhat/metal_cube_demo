@@ -81,8 +81,8 @@
     _library = [_device newDefaultLibrary];
     
     // shader functions
-    id<MTLFunction> vertexFunction = [_library newFunctionWithName:@"colorVertex"];
-    id<MTLFunction> fragmentFunction = [_library newFunctionWithName:@"colorFragment"];
+    id<MTLFunction> vertexFunction = [_library newFunctionWithName:@"ColorVertex"];
+    id<MTLFunction> fragmentFunction = [_library newFunctionWithName:@"ColorFragment"];
     
     // set render pipeline
     MTLRenderPipelineDescriptor *renderPipelineDescriptor = [MTLRenderPipelineDescriptor new];
