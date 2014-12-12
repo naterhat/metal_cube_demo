@@ -59,7 +59,7 @@
 
 - (matrix_float4x4)transform
 {
-    matrix_float4x4 m = matrix_multiply( matrix_multiply(_rotationMatrix, _translationMatrix), _scaleMatrix );
+    matrix_float4x4 m = matrix_multiply(matrix_multiply(_translationMatrix, _rotationMatrix), _scaleMatrix);
     return m;
 }
 

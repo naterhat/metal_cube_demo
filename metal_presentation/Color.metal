@@ -13,6 +13,7 @@ using namespace metal;
 
 struct FragmentInput
 {
+    float4 originalPosition;
     float4 position [[ position ]];
 };
 
@@ -24,13 +25,16 @@ vertex FragmentInput ColorVertex ( device Vertex *vertices [[ buffer(0) ]],
     
     Vertex v = vertices[vid];
     out.position = uniform.modelViewProjectionMatrix * v.position;
+    out.originalPosition = v.position;
     
     return out;
 }
 
 fragment half4 ColorFragment (FragmentInput in [[ stage_in ]] )
 {
-    return half(1);
+    half4 n = half4(normalize(in.originalPosition));
+    return n;
+//    return half(1) * half4();
 }
 
 

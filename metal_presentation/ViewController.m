@@ -111,6 +111,12 @@
 
 - (void)updatePhysics
 {
+    // update rotation
+    vector_float3 rotation = _transformComponent.rotation;
+    rotation.z += .5f;
+    rotation.x += .5f;
+    _transformComponent.rotation = rotation;
+    
     matrix_float4x4 modelView = matrix_multiply(_cameraComponent.view, _transformComponent.transform);
     matrix_float4x4 modelViewProjection = matrix_multiply(_cameraComponent.projection, modelView);
     
