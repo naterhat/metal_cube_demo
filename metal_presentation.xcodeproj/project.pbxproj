@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		431290F51A3A7BF200C64D9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 431290EE1A3A7BF200C64D9A /* AppDelegate.m */; };
+		431290F61A3A7BF200C64D9A /* Color.metal in Sources */ = {isa = PBXBuildFile; fileRef = 431290EF1A3A7BF200C64D9A /* Color.metal */; };
+		431290F71A3A7BF200C64D9A /* NTMetalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 431290F11A3A7BF200C64D9A /* NTMetalView.m */; };
+		431290F81A3A7BF200C64D9A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431290F41A3A7BF200C64D9A /* ViewController.m */; };
 		43816E311A357CEC005BD026 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43816E301A357CEC005BD026 /* main.m */; };
-		43816E341A357CEC005BD026 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43816E331A357CEC005BD026 /* AppDelegate.m */; };
-		43816E371A357CEC005BD026 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43816E361A357CEC005BD026 /* ViewController.m */; };
 		43816E3A1A357CEC005BD026 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43816E381A357CEC005BD026 /* Main.storyboard */; };
 		43816E3C1A357CEC005BD026 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43816E3B1A357CEC005BD026 /* Images.xcassets */; };
 		43816E3F1A357CEC005BD026 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43816E3D1A357CEC005BD026 /* LaunchScreen.xib */; };
 		43816E4B1A357CEC005BD026 /* metal_presentationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43816E4A1A357CEC005BD026 /* metal_presentationTests.m */; };
-		43816E561A357DC7005BD026 /* NTMetalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43816E551A357DC7005BD026 /* NTMetalView.m */; };
 		43816EC61A36D6C8005BD026 /* NTCameraComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 43816E9B1A36D6C8005BD026 /* NTCameraComponent.m */; };
 		43816EC71A36D6C8005BD026 /* NTComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 43816E9D1A36D6C8005BD026 /* NTComponent.mm */; };
 		43816ECC1A36D6C8005BD026 /* NTCubeWireMeshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 43816EA71A36D6C8005BD026 /* NTCubeWireMeshComponent.m */; };
@@ -31,7 +32,6 @@
 		43816ED81A36D6C8005BD026 /* NTMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 43816EC21A36D6C8005BD026 /* NTMath.m */; };
 		43816ED91A36D6C8005BD026 /* NTCollisionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 43816EC41A36D6C8005BD026 /* NTCollisionTest.m */; };
 		438B6F881A376FC1006D0CC1 /* NTTransformComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 438B6F871A376FC1006D0CC1 /* NTTransformComponent.m */; };
-		438B6F8A1A378EC3006D0CC1 /* Color.metal in Sources */ = {isa = PBXBuildFile; fileRef = 438B6F891A378EC3006D0CC1 /* Color.metal */; };
 		43C00E7C1A37B73B001A10D7 /* NTCubeMeshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C00E7B1A37B73B001A10D7 /* NTCubeMeshComponent.m */; };
 /* End PBXBuildFile section */
 
@@ -46,21 +46,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		431290ED1A3A7BF200C64D9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		431290EE1A3A7BF200C64D9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		431290EF1A3A7BF200C64D9A /* Color.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Color.metal; sourceTree = "<group>"; };
+		431290F01A3A7BF200C64D9A /* NTMetalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTMetalView.h; sourceTree = "<group>"; };
+		431290F11A3A7BF200C64D9A /* NTMetalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTMetalView.m; sourceTree = "<group>"; };
+		431290F21A3A7BF200C64D9A /* NTSharedDataTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSharedDataTypes.h; sourceTree = "<group>"; };
+		431290F31A3A7BF200C64D9A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		431290F41A3A7BF200C64D9A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		43816E2B1A357CEC005BD026 /* metal_presentation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = metal_presentation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43816E2F1A357CEC005BD026 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43816E301A357CEC005BD026 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		43816E321A357CEC005BD026 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		43816E331A357CEC005BD026 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		43816E351A357CEC005BD026 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		43816E361A357CEC005BD026 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		43816E391A357CEC005BD026 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43816E3B1A357CEC005BD026 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		43816E3E1A357CEC005BD026 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		43816E441A357CEC005BD026 /* metal_presentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = metal_presentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43816E491A357CEC005BD026 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43816E4A1A357CEC005BD026 /* metal_presentationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = metal_presentationTests.m; sourceTree = "<group>"; };
-		43816E541A357DC7005BD026 /* NTMetalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTMetalView.h; sourceTree = "<group>"; };
-		43816E551A357DC7005BD026 /* NTMetalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTMetalView.m; sourceTree = "<group>"; };
 		43816E991A36D6C8005BD026 /* NTComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTComponents.h; sourceTree = "<group>"; };
 		43816E9A1A36D6C8005BD026 /* NTCameraComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTCameraComponent.h; sourceTree = "<group>"; };
 		43816E9B1A36D6C8005BD026 /* NTCameraComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTCameraComponent.m; sourceTree = "<group>"; };
@@ -97,8 +99,6 @@
 		43816EC51A36D6C8005BD026 /* NTHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTHelpers.h; sourceTree = "<group>"; };
 		438B6F861A376FC1006D0CC1 /* NTTransformComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTTransformComponent.h; sourceTree = "<group>"; };
 		438B6F871A376FC1006D0CC1 /* NTTransformComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTTransformComponent.m; sourceTree = "<group>"; };
-		438B6F891A378EC3006D0CC1 /* Color.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; name = Color.metal; path = metal_presentation/Color.metal; sourceTree = SOURCE_ROOT; };
-		438B6F8B1A37913F006D0CC1 /* NTSharedDataTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTSharedDataTypes.h; sourceTree = "<group>"; };
 		43C00E7A1A37B73B001A10D7 /* NTCubeMeshComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTCubeMeshComponent.h; sourceTree = "<group>"; };
 		43C00E7B1A37B73B001A10D7 /* NTCubeMeshComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTCubeMeshComponent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,18 +143,10 @@
 			isa = PBXGroup;
 			children = (
 				43816E971A36D69F005BD026 /* Source */,
-				43816E321A357CEC005BD026 /* AppDelegate.h */,
-				438B6F8B1A37913F006D0CC1 /* NTSharedDataTypes.h */,
-				438B6F891A378EC3006D0CC1 /* Color.metal */,
-				43816E331A357CEC005BD026 /* AppDelegate.m */,
-				43816E351A357CEC005BD026 /* ViewController.h */,
-				43816E361A357CEC005BD026 /* ViewController.m */,
 				43816E381A357CEC005BD026 /* Main.storyboard */,
 				43816E3B1A357CEC005BD026 /* Images.xcassets */,
 				43816E3D1A357CEC005BD026 /* LaunchScreen.xib */,
 				43816E2E1A357CEC005BD026 /* Supporting Files */,
-				43816E541A357DC7005BD026 /* NTMetalView.h */,
-				43816E551A357DC7005BD026 /* NTMetalView.m */,
 			);
 			path = metal_presentation;
 			sourceTree = "<group>";
@@ -188,6 +180,14 @@
 		43816E971A36D69F005BD026 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				431290ED1A3A7BF200C64D9A /* AppDelegate.h */,
+				431290EE1A3A7BF200C64D9A /* AppDelegate.m */,
+				431290EF1A3A7BF200C64D9A /* Color.metal */,
+				431290F01A3A7BF200C64D9A /* NTMetalView.h */,
+				431290F11A3A7BF200C64D9A /* NTMetalView.m */,
+				431290F21A3A7BF200C64D9A /* NTSharedDataTypes.h */,
+				431290F31A3A7BF200C64D9A /* ViewController.h */,
+				431290F41A3A7BF200C64D9A /* ViewController.m */,
 				43816E981A36D69F005BD026 /* EngineSource */,
 			);
 			path = Source;
@@ -338,28 +338,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43816E561A357DC7005BD026 /* NTMetalView.m in Sources */,
+				431290F51A3A7BF200C64D9A /* AppDelegate.m in Sources */,
 				43816ECF1A36D6C8005BD026 /* NTSphereMeshComponent.m in Sources */,
 				43816ED01A36D6C8005BD026 /* NTTextureQuadMeshComponent.m in Sources */,
 				43816EC61A36D6C8005BD026 /* NTCameraComponent.m in Sources */,
-				43816E371A357CEC005BD026 /* ViewController.m in Sources */,
 				43816ED21A36D6C8005BD026 /* NTSpherePlaneMeshComponent.m in Sources */,
 				43816ED51A36D6C8005BD026 /* NTTexture.m in Sources */,
 				43816ED91A36D6C8005BD026 /* NTCollisionTest.m in Sources */,
+				431290F61A3A7BF200C64D9A /* Color.metal in Sources */,
 				43816ED11A36D6C8005BD026 /* NTLineMeshComponent.mm in Sources */,
 				43816EC71A36D6C8005BD026 /* NTComponent.mm in Sources */,
 				438B6F881A376FC1006D0CC1 /* NTTransformComponent.m in Sources */,
-				43816E341A357CEC005BD026 /* AppDelegate.m in Sources */,
 				43816ECE1A36D6C8005BD026 /* NTQuadMeshComponent.m in Sources */,
 				43816E311A357CEC005BD026 /* main.m in Sources */,
 				43816ECC1A36D6C8005BD026 /* NTCubeWireMeshComponent.m in Sources */,
 				43816ED81A36D6C8005BD026 /* NTMath.m in Sources */,
 				43816ED71A36D6C8005BD026 /* NTUtilities.m in Sources */,
-				438B6F8A1A378EC3006D0CC1 /* Color.metal in Sources */,
+				431290F81A3A7BF200C64D9A /* ViewController.m in Sources */,
 				43816ED61A36D6C8005BD026 /* NTConversion.m in Sources */,
 				43816ED41A36D6C8005BD026 /* NTObjectGroup.m in Sources */,
 				43816ED31A36D6C8005BD026 /* NTRayMeshComponent.m in Sources */,
 				43C00E7C1A37B73B001A10D7 /* NTCubeMeshComponent.m in Sources */,
+				431290F71A3A7BF200C64D9A /* NTMetalView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

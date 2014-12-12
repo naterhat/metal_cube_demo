@@ -97,7 +97,7 @@
     // initialize components
     _mesh = [NTCubeMeshComponent component];
     _transformComponent = [NTTransformComponent component];
-    [_transformComponent setPositionWithX:0 Y:0 Z:10];
+    [_transformComponent setPositionWithX:0 Y:0 Z:5];
     _cameraComponent = [NTCameraComponent cameraWithSize:self.view.frame.size];
     
     // set buffers
