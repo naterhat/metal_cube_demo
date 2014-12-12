@@ -20,9 +20,6 @@
 		43816EC71A36D6C8005BD026 /* NTComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 43816E9D1A36D6C8005BD026 /* NTComponent.mm */; };
 		43816ECC1A36D6C8005BD026 /* NTCubeWireMeshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 43816EA71A36D6C8005BD026 /* NTCubeWireMeshComponent.m */; };
 		43816ECE1A36D6C8005BD026 /* NTQuadMeshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 43816EAB1A36D6C8005BD026 /* NTQuadMeshComponent.m */; };
-		43816ECF1A36D6C8005BD026 /* NTSphereMeshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 43816EAD1A36D6C8005BD026 /* NTSphereMeshComponent.m */; };
-		43816ED01A36D6C8005BD026 /* NTTextureQuadMeshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 43816EB01A36D6C8005BD026 /* NTTextureQuadMeshComponent.m */; };
-		43816ED11A36D6C8005BD026 /* NTLineMeshComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 43816EB21A36D6C8005BD026 /* NTLineMeshComponent.mm */; };
 		43816ED21A36D6C8005BD026 /* NTSpherePlaneMeshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 43816EB41A36D6C8005BD026 /* NTSpherePlaneMeshComponent.m */; };
 		43816ED31A36D6C8005BD026 /* NTRayMeshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 43816EB61A36D6C8005BD026 /* NTRayMeshComponent.m */; };
 		43816ED41A36D6C8005BD026 /* NTObjectGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 43816EB81A36D6C8005BD026 /* NTObjectGroup.m */; };
@@ -72,12 +69,6 @@
 		43816EA71A36D6C8005BD026 /* NTCubeWireMeshComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTCubeWireMeshComponent.m; sourceTree = "<group>"; };
 		43816EAA1A36D6C8005BD026 /* NTQuadMeshComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTQuadMeshComponent.h; sourceTree = "<group>"; };
 		43816EAB1A36D6C8005BD026 /* NTQuadMeshComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTQuadMeshComponent.m; sourceTree = "<group>"; };
-		43816EAC1A36D6C8005BD026 /* NTSphereMeshComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSphereMeshComponent.h; sourceTree = "<group>"; };
-		43816EAD1A36D6C8005BD026 /* NTSphereMeshComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSphereMeshComponent.m; sourceTree = "<group>"; };
-		43816EAF1A36D6C8005BD026 /* NTTextureQuadMeshComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTTextureQuadMeshComponent.h; sourceTree = "<group>"; };
-		43816EB01A36D6C8005BD026 /* NTTextureQuadMeshComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTTextureQuadMeshComponent.m; sourceTree = "<group>"; };
-		43816EB11A36D6C8005BD026 /* NTLineMeshComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTLineMeshComponent.h; sourceTree = "<group>"; };
-		43816EB21A36D6C8005BD026 /* NTLineMeshComponent.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NTLineMeshComponent.mm; sourceTree = "<group>"; };
 		43816EB31A36D6C8005BD026 /* NTSpherePlaneMeshComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSpherePlaneMeshComponent.h; sourceTree = "<group>"; };
 		43816EB41A36D6C8005BD026 /* NTSpherePlaneMeshComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSpherePlaneMeshComponent.m; sourceTree = "<group>"; };
 		43816EB51A36D6C8005BD026 /* NTRayMeshComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTRayMeshComponent.h; sourceTree = "<group>"; };
@@ -209,12 +200,6 @@
 				43816EA71A36D6C8005BD026 /* NTCubeWireMeshComponent.m */,
 				43816EAA1A36D6C8005BD026 /* NTQuadMeshComponent.h */,
 				43816EAB1A36D6C8005BD026 /* NTQuadMeshComponent.m */,
-				43816EAC1A36D6C8005BD026 /* NTSphereMeshComponent.h */,
-				43816EAD1A36D6C8005BD026 /* NTSphereMeshComponent.m */,
-				43816EAF1A36D6C8005BD026 /* NTTextureQuadMeshComponent.h */,
-				43816EB01A36D6C8005BD026 /* NTTextureQuadMeshComponent.m */,
-				43816EB11A36D6C8005BD026 /* NTLineMeshComponent.h */,
-				43816EB21A36D6C8005BD026 /* NTLineMeshComponent.mm */,
 				43816EB31A36D6C8005BD026 /* NTSpherePlaneMeshComponent.h */,
 				43816EB41A36D6C8005BD026 /* NTSpherePlaneMeshComponent.m */,
 				43816EB51A36D6C8005BD026 /* NTRayMeshComponent.h */,
@@ -339,14 +324,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				431290F51A3A7BF200C64D9A /* AppDelegate.m in Sources */,
-				43816ECF1A36D6C8005BD026 /* NTSphereMeshComponent.m in Sources */,
-				43816ED01A36D6C8005BD026 /* NTTextureQuadMeshComponent.m in Sources */,
 				43816EC61A36D6C8005BD026 /* NTCameraComponent.m in Sources */,
 				43816ED21A36D6C8005BD026 /* NTSpherePlaneMeshComponent.m in Sources */,
 				43816ED51A36D6C8005BD026 /* NTTexture.m in Sources */,
 				43816ED91A36D6C8005BD026 /* NTCollisionTest.m in Sources */,
 				431290F61A3A7BF200C64D9A /* Color.metal in Sources */,
-				43816ED11A36D6C8005BD026 /* NTLineMeshComponent.mm in Sources */,
 				43816EC71A36D6C8005BD026 /* NTComponent.mm in Sources */,
 				438B6F881A376FC1006D0CC1 /* NTTransformComponent.m in Sources */,
 				43816ECE1A36D6C8005BD026 /* NTQuadMeshComponent.m in Sources */,

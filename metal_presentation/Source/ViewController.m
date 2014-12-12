@@ -52,7 +52,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     _ticker = [CADisplayLink displayLinkWithTarget:self selector:@selector(perFrame)];
     [_ticker addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
     
