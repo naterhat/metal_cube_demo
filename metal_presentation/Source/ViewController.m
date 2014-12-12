@@ -52,22 +52,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _ticker = [CADisplayLink displayLinkWithTarget:self selector:@selector(perFrame)];
-    [_ticker addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+    _ticker = [CADisplayLink displayLinkWithTarget:self
+                                          selector:@selector(perFrame)];
+    [_ticker addToRunLoop:[NSRunLoop mainRunLoop]
+                  forMode:NSDefaultRunLoopMode];
     
     [self setup];
 }
 
 - (void)setup
 {
+    // retrieve device
     _device = MTLCreateSystemDefaultDevice();
     
+    // setup layer with device
     _metalLayer = (id)self.view.layer;
     [_metalLayer setDevice:_device];
     
+    // get command queue
     _commandQueue = [_device newCommandQueue];
     
+    // retrieve the shader library
     _library = [_device newDefaultLibrary];
+    
+    
+    // ///
+    // Now, create the render pipeline and states
+    //  that will be used later
     
     // shader functions
     id<MTLFunction> vertexFunction = [_library newFunctionWithName:@"ColorVertex"];
@@ -86,6 +97,7 @@
         NSLog(@"%@", error.localizedDescription);
     }
     
+    // ///
     // set depth state
     MTLDepthStencilDescriptor *depthDescriptor = [MTLDepthStencilDescriptor new];
     [depthDescriptor setDepthCompareFunction:MTLCompareFunctionLess];
@@ -100,10 +112,11 @@
     _cameraComponent = [NTCameraComponent cameraWithSize:self.view.frame.size];
     
     // set buffers
-    _vertexBuffer = [_device newBufferWithBytes:[_mesh vertexData] length:[_mesh vertexTotalSize] options:MTLResourceOptionCPUCacheModeDefault];
-    _uniformBuffer = [_device newBufferWithLength:sizeof(Uniform) options:MTLResourceOptionCPUCacheModeDefault];
-    
-    
+    _vertexBuffer = [_device newBufferWithBytes:[_mesh vertexData]
+                                         length:[_mesh vertexTotalSize]
+                                        options:MTLResourceOptionCPUCacheModeDefault];
+    _uniformBuffer = [_device newBufferWithLength:sizeof(Uniform)
+                                          options:MTLResourceOptionCPUCacheModeDefault];
 }
 
 #pragma mark - Per Frame
@@ -116,13 +129,12 @@
     rotation.x += .5f;
     _transformComponent.rotation = rotation;
     
+    // retrieve the Model View Projection matrix
     matrix_float4x4 modelView = matrix_multiply(_cameraComponent.view, _transformComponent.transform);
     matrix_float4x4 modelViewProjection = matrix_multiply(_cameraComponent.projection, modelView);
-    
     _uniform.modelViewProjectionMatrix = modelViewProjection;
     
-    _uniform.normalMatrix = matrix_invert( matrix_transpose(modelView) );
-    
+    // since the data is dynamic, must copy the new data to the buffer
     memcpy([_uniformBuffer contents], &_uniform, sizeof(Uniform));
 }
 
@@ -131,7 +143,7 @@
     // create command buffer
     _commandBuffer = [_commandQueue commandBuffer];
     
-    // get drawable texture
+    // retrieve drawable texture
     _drawable = [_metalLayer nextDrawable];
     NSAssert(_drawable != nil, @"Error retrieving drawable");
     id<MTLTexture>drawableTexture = [_drawable texture];
