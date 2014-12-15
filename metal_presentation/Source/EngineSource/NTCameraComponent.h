@@ -24,8 +24,5 @@ NTCameraT NTCameraTDefault();
 + (NTCameraComponent *)mainCamera;
 - (instancetype)initWithSize:(CGSize)size;
 + (instancetype)cameraWithSize:(CGSize)size;
-//- (NTCameraT *)cameraPointer;
-
-//- (vector_float3)positionFromScreenSpaceToWorldSpaceWithPoint:(vector_float2)touchPoint distance:(float)distance;
 
 @end

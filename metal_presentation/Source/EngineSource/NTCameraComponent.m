@@ -7,7 +7,6 @@
 //
 
 #import "NTCameraComponent.h"
-#import "NTConversion.h"
 #import "NTMath.h"
 
 NTCameraT NTCameraTDefault()
@@ -69,12 +68,5 @@ NTCameraT NTCameraTDefault()
 {
     return _view;
 }
-
-//- (vector_float3)positionFromScreenSpaceToWorldSpaceWithPoint:(vector_float2)touchPoint distance:(float)distance
-//{
-//    vector_float3 rayDirection = NTRayDirectionFromScreenToWorldSpace(touchPoint, self.size, self.projection, self.view);
-//    
-//    return rayDirection * distance + self.parent.transform.position;
-//}
 
 @end
