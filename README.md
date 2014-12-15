@@ -1,4 +1,4 @@
-metal_cube_demo
+metal cube demo
 ===============
 
 This is a demo that shows off Metal by displaying a color cube.
